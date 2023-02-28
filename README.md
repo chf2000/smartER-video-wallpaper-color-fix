@@ -1,3 +1,5 @@
+Original implementation may go wrong on newer version of plasma desktop and gstreamer. Video format may be displayed as BGR format rather than RGB format. This simple fix can solve this problem but it also introduces another small problem that the video source path CANNOT include any Chinese character.  
+
 # smartER-video-wallpaper
 SmartER Video Wallpaper
 
