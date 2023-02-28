@@ -263,7 +263,7 @@ Item {
         title: "Pick a video file"
         nameFilters: [ "Video files (*.mp4 *.mpg *.ogg *.mov *.webm *.flv *.matroska *.avi *wmv)", "All files (*)" ]
         onAccepted: {
-            cfg_VideoWallpaperBackgroundVideo = fileDialog.fileUrls[0]
+            cfg_VideoWallpaperBackgroundVideo = "gst-pipeline: filesrc location=\"" + fileDialog.fileUrls[0].substring(7) + "\" ! decodebin ! autovideosink"
             videoPreviewLoader.source = "QuickPreview.qml"
         }
     }
